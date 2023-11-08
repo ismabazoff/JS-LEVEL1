@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Таблица с данными</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                border: 1px solid black;
+                padding: 8px;
+            }
+            .pagination {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .pagination button {
+                margin: 0 5px;
+                padding: 5px 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .pagination button.active {
+                background-color: #ccc;
+                cursor: default;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="data-table">
+            <tbody class="tbody">
+                <thead>
+                    <th onclick="sortTable(0)">First Name</th>
+                    <th onclick="sortTable(1)">Last Name</th>
+                    <th onclick="sortTable(2)">Phone</th>
+                    <th onclick="sortTable(3)">Address</th>
+                    <th onclick="sortTable(4)">City</th>
+                    <th onclick="sortTable(5)">State</th>
+                    <th onclick="sortTable(6)">Zip</th>
+                </thead>
+            </tbody>
+        </table>
+        <div id="pagination" class="pagination"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
